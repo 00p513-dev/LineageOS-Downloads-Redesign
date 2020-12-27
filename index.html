@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#167c80" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <title>LineageOS Downloads</title>
+    <title>Amy's ROMs</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" href="./res/material-design.png">
@@ -15,7 +15,7 @@
 
 <body>
 
-    <div class="drawer__wrapper">
+    <div class="drawer__wrapper" id="drawerMenu">
         <div class="drawer">
             <div class="drawer__header">
                 <span>Amy's ROMs</span>
@@ -24,10 +24,12 @@
             <nav class="drawer__main">
 	            <dd>
                         <button class="tablinks" onclick="openTab(event, 'channel')">Moto g7 Play<span>channel</span></button>
+                        <button class="tablinks" onclick="openTab(event, 'evert')">Moto g6 Plus<span>evert</span></button>
+                        <button class="tablinks" onclick="openTab(event, 'lake')">Moto g7 Power<span>lake</span></button>
                         <button class="tablinks" onclick="openTab(event, 'lavender')">Redmi Note 7/7S<span>lavender</span></button>
-                        <button class="tablinks">Moto g7 Power<span>ocean</span></button>
-                        <button class="tablinks">Moto g7<span>river</span></button>
-                        <button class="tablinks">Teracube One<span>v7101o</span></button>
+                        <button class="tablinks" onclick="openTab(event, 'ocean')">Moto g7 Power<span>ocean</span></button>
+                        <button class="tablinks" onclick="openTab(event, 'river')">Moto g7<span>river</span></button>
+                        <!--<button class="tablinks">Teracube One<span>v7101o</span></button>-->
                     </dd>
                 </dl>
             </nav>
@@ -35,7 +37,7 @@
         <div class="drawer__protection"></div>
     </div>
     <div class="appbar">
-        <i class="material-icons">menu</i>
+        <button class="nostylebutton" onclick="toggleMenu()"><i class="material-icons">menu</i></button>
         <span class="appbar__title">Amy's ROMs</span>
     </div>
     <div class="tabcontent" id="channel">
@@ -64,7 +66,7 @@
             <span class="version">/e/ 0.13</span>
             <div class="package">
                 <a href="https://pixeldrain.com/u/svd1SBra" class="package">e-0.13-q-20201128-UNOFFICIAL-channel.zip</a>
-                <a href="" class="signature">md5: </a>
+                <a href="" class="signature">md5: 481f406c013ed7549bfd755e58e4dd9d</a>
             </div>
             <span class="size">860.8 MB</span>
             <span class="date">2020-11-28</span>
@@ -72,6 +74,7 @@
         <hr />
         <span class="footer">Licensed under Apache 2.0.</span>
     </div>
+
     <div class="tabcontent" id="lavender">
         <div class="content__header">
             <span class="content__title">Builds for lavender</span>
@@ -83,7 +86,7 @@
             <span class="grid__header date">Date</span>
             <span class="version">/e/ 0.13 Q</span>
             <div class="package">
-                <a href="https://sourceforge.net/projects/amys-roms/files/e/e-0.13-q-20201227-UNOFFICIAL-lavender.zip/download" class="package">crDroidAndroid-10.0-20201217-channel-v6.13.zip</a>
+                <a href="https://sourceforge.net/projects/amys-roms/files/e/e-0.13-q-20201227-UNOFFICIAL-lavender.zip/download" class="package">e-0.13-q-20201227-UNOFFICIAL-lavender.zip</a>
                 <a href="" class="signature">md5: e625efd65c9a911004585414434cbfde</a>
             </div>
 	    <span class="size">1.1 GB</span>
@@ -92,7 +95,97 @@
         <hr />
         <span class="footer">Licensed under Apache 2.0.</span>
     </div>
+
+    <div class="tabcontent" id="ocean">
+        <div class="content__header">
+            <span class="content__title">Builds for ocean</span>
+        </div>
+        <div class="content__files">
+            <span class="grid__header version">ROM and version</span>
+            <span class="grid__header">File</span>
+            <span class="grid__header size">Size</span>
+            <span class="grid__header date">Date</span>
+            <span class="version">Bliss 12.12</span>
+            <div class="package">
+                <a href="https://sourceforge.net/projects/amys-roms/files/Bliss/Bliss-v12.12-ocean-UNOFFICIAL-20201212.zip/download" class="package">Bliss-v12.12-ocean-UNOFFICIAL-20201212.zip</a>
+                <a href="" class="signature">md5: a94f3838458304cde64241dfb705ce6d</a>
+            </div>
+	    <span class="size">949.4 MB</span>
+            <span class="date">2020-12-12</span>
+        </div>
+        <hr />
+        <span class="footer">Licensed under Apache 2.0.</span>
+    </div>
+
+    <div class="tabcontent" id="evert">
+        <div class="content__header">
+            <span class="content__title">Builds for evert</span>
+        </div>
+        <div class="content__files">
+            <span class="grid__header version">ROM and version</span>
+            <span class="grid__header">File</span>
+            <span class="grid__header size">Size</span>
+            <span class="grid__header date">Date</span>
+            <span class="version">Bliss 12.12</span>
+            <div class="package">
+                <a href="https://sourceforge.net/projects/amys-roms/files/Bliss/Bliss-v12.12-evert-UNOFFICIAL-20201215.zip/download" class="package">Bliss-v12.12-evert-UNOFFICIAL-20201215.zip</a>
+                <a href="" class="signature">md5: 4b3e182d34085bc422181352c3e995f6</a>
+            </div>
+	    <span class="size">1.0 GB</span>
+            <span class="date">2020-12-15</span>
+        </div>
+        <hr />
+        <span class="footer">Licensed under Apache 2.0.</span>
+    </div>
+
+    <div class="tabcontent" id="lake">
+        <div class="content__header">
+            <span class="content__title">Builds for lake</span>
+        </div>
+        <div class="content__files">
+            <span class="grid__header version">ROM and version</span>
+            <span class="grid__header">File</span>
+            <span class="grid__header size">Size</span>
+            <span class="grid__header date">Date</span>
+            <span class="version">Bliss 12.12</span>
+            <div class="package">
+                <a href="https://sourceforge.net/projects/amys-roms/files/Bliss/Bliss-v12.12-lake-UNOFFICIAL-20201213.zip/download" class="package">Bliss-v12.12-lake-UNOFFICIAL-20201213.zip</a>
+                <a href="" class="signature">md5: 60ddbc8369bedf27c5ba2433c2b826f7</a>
+            </div>
+	    <span class="size">1.0 GB</span>
+            <span class="date">2020-12-13</span>
+        </div>
+        <hr />
+        <span class="footer">Licensed under Apache 2.0.</span>
+    </div>
+
+    <div class="tabcontent" id="river">
+        <div class="content__header">
+            <span class="content__title">Builds for river</span>
+        </div>
+        <div class="content__files">
+            <span class="grid__header version">ROM and version</span>
+            <span class="grid__header">File</span>
+            <span class="grid__header size">Size</span>
+            <span class="grid__header date">Date</span>
+            <span class="version">Bliss 12.12</span>
+            <div class="package">
+                <a href="https://sourceforge.net/projects/amys-roms/files/Bliss/Bliss-v12.12-river-UNOFFICIAL-20201212.zip/download" class="package">Bliss-v12.12-river-UNOFFICIAL-20201212.zip</a>
+                <a href="" class="signature">md5: 3b03d64e7544a6421082ff8c15f7f66c</a>
+            </div>
+	    <span class="size">950.4 MB</span>
+            <span class="date">2020-12-12</span>
+        </div>
+        <hr />
+        <span class="footer">Licensed under Apache 2.0.</span>
+    </div>
+
+
+
+
     <script>
+    var menuShown = 0;
+
     function hideAll() {
       // Get all elements with class="tabcontent" and hide them
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -106,7 +199,7 @@
     function openTab(evt, tabName) {
       // Declare all variables
       var i, tabcontent, tablinks;
-
+      
       // Get all elements with class="tabcontent" and hide them
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
@@ -122,6 +215,26 @@
       // Show the current tab, and add an "selected" class to the link that opened the tab
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " selected";
+    }
+
+    function toggleMenu() {
+      if (menuShown == 1) {
+        hideMenu;
+      } else {
+        showMenu;
+      }
+    }
+
+    function showMenu() {
+      document.getElementById(drawerMenu).style.display="block";
+      menuShown = 1;
+      console.log("show")
+    }
+
+    function hideMenu() {
+      document.getElementById(drawerMenu).style.display="none";
+      menuShown = 0;
+      console.log("hide")
     }
     </script> 
 </body>

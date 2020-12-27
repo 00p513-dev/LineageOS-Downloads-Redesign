@@ -138,6 +138,16 @@ nav button {
     border: 0;
 }
 
+.nostylebutton {
+    border: 0;
+    padding: none;
+    outline: none;
+    background-color: transparent;
+}
+.menubutton:hover {
+    background-color: #ffffffee;
+}
+
 nav hr {
     margin: 8px 0;
 }
