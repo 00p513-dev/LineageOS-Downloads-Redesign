@@ -16,8 +16,8 @@ body {
     --deceleration-curve: cubic-bezier(0.0, 0.0, 0.2, 1);
     --acceleration-curve: cubic-bezier(0.4, 0.0, 1, 1);
     --sharp-curve: cubic-bezier(0.4, 0.0, 0.6, 1);
-    --primary-color: #167c80;
-    --secondary-color: #135957;
+    --primary-color: #9575cd;
+    --secondary-color: #65499c;
     --increment: 64px;
     --keyline: 24px;
 }
@@ -128,13 +128,14 @@ dd {
     background-color: rgba(0, 0, 0, 0);
 }
 
-nav a {
+nav button {
     padding-left: calc(2 * var(--keyline));
     font-size: 14px;
     line-height: 40px;
     color: rgba(0, 0, 0, 0.87);
     display: flex;
     justify-content: space-between;
+    border: 0;
 }
 
 nav hr {
